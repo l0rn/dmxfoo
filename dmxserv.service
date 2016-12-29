@@ -1,0 +1,16 @@
+[Unit]
+Description=DMX Server
+After=network.target
+
+[Service]
+ExecStart=/home/pi/websocket/server.js
+Restart=always
+User=nobody
+Group=nobody
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=production
+WorkingDirectory=/home/pi/websocket/
+
+[Install]
+WantedBy=multi-user.target
+

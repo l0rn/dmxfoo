@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--Stylesheets-->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css">
+  <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css">
+  <link rel="stylesheet" href="jPicker.css">
+  <link rel="stylesheet" href="js/bootstrap/css/bootstrap.min.css">
+
+  <!--Javascript-->
+  <script src="socket.io/socket.io.js"></script>
+  <script src="js/jquery-ui/external/jquery/jquery.js"></script>
+  <script src="js/jquery-ui/jquery-ui.min.js"></script>
+  <script src="js/jquery.ui.touch-punch.js"></script>
+  <script src="js/bootstrap/js/bootstrap.min.js"></script>
+  <script src="jpicker-1.1.6.js"></script>
+  <script src="client.js"></script>
+
+</head>
+<body>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">DMFX</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+  <div class='top-fix'></div>
+  <div class='container spawn'>
+    <div class="row">
+      <div class='col-sm-12 col-md-12'>
+        <p>
+          <label for="amount">RGBW</label>
+          <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+        </p>
+        <div id='ratingResult'></div>
+        <div id="rgb">
+            <span id='red'></span>
+            <span id='green'></span>
+            <span id='blue'></span>
+            <span id='white'></span>
+        </div>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-sm-12 col-md-12'>
+        <button class="btn btn-default full-tap" data-val='255' data-chan='0' type="submit">1</button>
+        <button class="btn btn-default full-tap" data-val='255' data-chan='1' type="submit">2</button>
+        <button class="btn btn-default full-tap" data-val='255' data-chan='2' type="submit">3</button>
+        <button class="btn btn-default full-tap" data-val='255' data-chan='3' type="submit">3</button>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-sm-12 col-md-12'>
+        <button class="btn btn-default full-tap" data-val='0' data-chan='0' type="submit">1</button>
+        <button class="btn btn-default full-tap" data-val='0' data-chan='1' type="submit">2</button>
+        <button class="btn btn-default full-tap" data-val='0' data-chan='2' type="submit">3</button>
+        <button class="btn btn-default full-tap" data-val='0' data-chan='3' type="submit">3</button>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-sm-12 col-md-12'>
+        Rainbow:
+        <button class="btn btn-default function-tap" data-val='1' type="submit">on</button>
+        <button class="btn btn-default function-tap" data-val='0' type="submit">off</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
